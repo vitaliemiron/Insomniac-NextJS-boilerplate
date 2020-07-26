@@ -3,8 +3,16 @@ import * as React from 'react';
 import { NextPage } from 'next';
 // #endregion Global Imports
 
-// #region Interface Imports
-import { IErrorPage } from '@Interfaces';
+// #region Interface Importsdeclare namespace IErrorPage {
+declare namespace IErrorPage {
+  export interface IProps {
+    statusCode?: number;
+  }
+
+  export interface InitialProps {
+    namespacesRequired: string[];
+  }
+}
 // #endregion Interface Imports
 
 const Error: NextPage<IErrorPage.IProps, IErrorPage.InitialProps> = ({

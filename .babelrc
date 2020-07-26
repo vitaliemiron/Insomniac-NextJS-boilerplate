@@ -8,7 +8,6 @@
         "alias": {
           "@Components": "./src/Components",
           "@Utils": "./src/Utils",
-          "@Interfaces": "./src/Interfaces",
           "@Pages": "./pages",
           "@Public": "./public"
         }

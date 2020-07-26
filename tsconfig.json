@@ -15,20 +15,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@Actions": ["src/Actions"],
       "@Components/*": ["src/Components/*"],
       "@Components": ["src/Components"],
-      "@Bundles": ["src/T-Bundles"],
-      "@Bundles/*": ["src/T-Bundles/*"],
       "@Utils/*": ["src/Utils/*"],
       "@Utils": ["src/Utils"],
-      "@Interfaces": ["src/Interfaces"],
-      "@Interfaces/*": ["src/Interfaces/*"],
-      "@Pages/*": ["pages/*"],
-      "@Server/*": ["server/*"],
-      "@Static/*": ["static/*"],
-      "@Test/*": ["test/*"],
-      "@Apollo/*": ["src/Apollo/*"]
+      "@Pages/*": ["pages/*"]
     }
   },
   "exclude": [
