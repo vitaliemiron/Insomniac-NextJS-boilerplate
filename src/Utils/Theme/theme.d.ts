@@ -1,0 +1,66 @@
+// #region Global Imports
+import 'styled-components';
+import { Theme } from '@material-ui/core/styles/createMuiTheme';
+
+import * as React from 'react';
+
+// #endregion Global Imports
+interface Color {
+  base: string;
+  [key: string]: string;
+}
+
+interface Heading {
+  fontSize: number;
+  lineHeight?: React.CSSProperties['lineHeight'];
+  padding?: React.CSSProperties['padding'];
+  maxWidth?: React.CSSProperties['maxWidth'];
+  letterSpacing?: React.CSSProperties['letterSpacing'];
+  sm: {
+    fontSize: number;
+  };
+}
+
+interface NBSTRNTheme {
+  colors: {
+    [key: string]: Color;
+  };
+  borderRadius: {
+    base: string;
+    mobile: string;
+  };
+  navbar: {
+    'z-index': number;
+  };
+  typography: {
+    rootBase: string;
+    fontBase: string;
+  };
+}
+
+export interface NBSTRNColorScheme {
+  [key: string]: string[];
+}
+
+declare module '@material-ui/core/styles/createTypography' {
+  interface FontStyle {
+    htmlSize: string;
+    headings: {
+      h1: {
+        main: Heading;
+        secondary: Heading;
+      };
+    };
+  }
+}
+
+/* eslint-disable @typescript-eslint/no-empty-interface */
+declare module 'styled-components' {
+  interface DefaultTheme extends Theme {}
+}
+
+declare module '@material-ui/core/styles/createMuiTheme' {
+  interface Theme extends NBSTRNTheme {}
+  // allow configuration using `createMuiTheme`
+  interface ThemeOptions extends NBSTRNTheme {}
+}

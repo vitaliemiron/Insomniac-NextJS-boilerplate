@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@Actions": ["src/Actions"],
+      "@Components/*": ["src/Components/*"],
+      "@Components": ["src/Components"],
+      "@Bundles": ["src/T-Bundles"],
+      "@Bundles/*": ["src/T-Bundles/*"],
+      "@Utils/*": ["src/Utils/*"],
+      "@Utils": ["src/Utils"],
+      "@Interfaces": ["src/Interfaces"],
+      "@Interfaces/*": ["src/Interfaces/*"],
+      "@Pages/*": ["pages/*"],
+      "@Server/*": ["server/*"],
+      "@Static/*": ["static/*"],
+      "@Test/*": ["test/*"],
+      "@Apollo/*": ["src/Apollo/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    "out",
+    "next.config.js",
+    ".babelrc",
+    "bundles",
+    "coverage",
+    "test/*"
+  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
