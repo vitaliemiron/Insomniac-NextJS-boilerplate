@@ -22,6 +22,12 @@ export const GlobalStyles = createGlobalStyle`
       cursor:pointer;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+    }
+
     figure {
       margin:0;
     }
