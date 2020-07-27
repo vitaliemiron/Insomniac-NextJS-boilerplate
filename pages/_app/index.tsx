@@ -4,11 +4,17 @@ import * as React from 'react';
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 // #endregion Global Imports
 
 // #region Local Imports
 import { theme } from '@Utils';
 // #endregion Local Imports
+
+const client = new ApolloClient({
+  uri: 'https://api.spacex.land/graphql',
+  cache: new InMemoryCache(),
+});
 
 class WebApp extends App {
   componentDidMount() {
@@ -21,11 +27,13 @@ class WebApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <ThemeProvider theme={theme}>
-        <MuiThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </MuiThemeProvider>
-      </ThemeProvider>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme}>
+          <MuiThemeProvider theme={theme}>
+            <Component {...pageProps} />
+          </MuiThemeProvider>
+        </ThemeProvider>
+      </ApolloProvider>
     );
   }
 }

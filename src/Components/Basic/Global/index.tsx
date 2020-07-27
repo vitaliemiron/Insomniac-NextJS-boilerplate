@@ -7,9 +7,5 @@ import { GlobalStyles } from './styled';
 // #endregion Local Imports
 
 export const Global: React.FunctionComponent = () => {
-  return (
-    <>
-      <GlobalStyles />
-    </>
-  );
+  return <GlobalStyles />;
 };
