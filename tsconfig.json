@@ -31,8 +31,7 @@
     "next.config.js",
     ".babelrc",
     "bundles",
-    "coverage",
-    "test/*"
+    "coverage"
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
