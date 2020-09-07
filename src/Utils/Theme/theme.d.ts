@@ -1,6 +1,6 @@
 // #region Global Imports
 import 'styled-components';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
+import { Theme as MuiTheme } from '@material-ui/core/styles/createMuiTheme';
 
 import * as React from 'react';
 
@@ -56,7 +56,7 @@ declare module '@material-ui/core/styles/createTypography' {
 
 /* eslint-disable @typescript-eslint/no-empty-interface */
 declare module 'styled-components' {
-  interface DefaultTheme extends Theme {}
+  interface DefaultTheme extends MuiTheme {}
 }
 
 declare module '@material-ui/core/styles/createMuiTheme' {
