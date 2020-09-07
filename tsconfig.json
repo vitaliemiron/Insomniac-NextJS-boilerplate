@@ -19,7 +19,8 @@
       "@Components": ["src/Components"],
       "@Utils/*": ["src/Utils/*"],
       "@Utils": ["src/Utils"],
-      "@Pages/*": ["pages/*"]
+      "@Pages/*": ["pages/*"],
+      "@Generated": ["generated"]
     }
   },
   "exclude": [

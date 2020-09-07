@@ -9,7 +9,8 @@
           "@Components": "./src/Components",
           "@Utils": "./src/Utils",
           "@Pages": "./pages",
-          "@Public": "./public"
+          "@Public": "./public",
+          "@Generated": "./generated"
         }
       }
     ],
