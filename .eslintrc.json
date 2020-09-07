@@ -4,6 +4,7 @@
   "parserOptions": {
     "ecmaFeatures": { "jsx": true }
   },
+
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -12,6 +13,7 @@
       "typescript": {}
     }
   },
+  "ignorePatterns": ["next.config.js"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
