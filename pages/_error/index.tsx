@@ -16,7 +16,7 @@ declare namespace IErrorPage {
 // #endregion Interface Imports
 
 const Error: NextPage<IErrorPage.IProps, IErrorPage.InitialProps> = ({
-  statusCode,
+  statusCode
 }) => {
   return (
     <div>
@@ -37,7 +37,7 @@ Error.getInitialProps = async ({ res, err }) => {
 
   return {
     namespacesRequired: ['common'],
-    statusCode,
+    statusCode
   };
 };
 

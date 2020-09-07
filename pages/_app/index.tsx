@@ -13,7 +13,7 @@ import { theme } from '@Utils';
 
 const client = new ApolloClient({
   uri: 'https://api.spacex.land/graphql',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache()
 });
 
 class WebApp extends App {
