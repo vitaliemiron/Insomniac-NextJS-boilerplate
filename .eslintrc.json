@@ -4,7 +4,6 @@
   "parserOptions": {
     "ecmaFeatures": { "jsx": true }
   },
-
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -13,13 +12,12 @@
       "typescript": {}
     }
   },
-  "ignorePatterns": ["next.config.js"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
+    "plugin:jsx-a11y/strict",
 
     // Prettier plugin and recommended rules
     "prettier/@typescript-eslint",
@@ -37,7 +35,10 @@
       {
         "ignore": [".svg"]
       }
-    ]
+    ],
+    "no-use-before-define": [0],
+    "@typescript-eslint/no-use-before-define": [1],
+    "@typescript-eslint/no-explicit-any": ["error"]
   },
   "overrides": [
     {
