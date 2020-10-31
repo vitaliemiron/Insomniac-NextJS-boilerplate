@@ -1,4 +1,6 @@
 [![DeepScan grade](https://deepscan.io/api/teams/11116/projects/14030/branches/250915/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11116&pid=14030&bid=250915)
+[![Maintainability](https://api.codeclimate.com/v1/badges/16c2ba5c4ead18b917d7/maintainability)](https://codeclimate.com/github/vitaliemiron/Insomniac-NextJS-boilerplate/maintainability)
+
 <img src="banner.jpg" alt="Performance oriented Next.js application boilerplate with GraphQL, Typescript, Express.js and Styled Components." align="center" />
 
 <br/>
