@@ -12,11 +12,15 @@
 /.next/
 /out/
 
+#graphql
+Generated/
+
 # production
 /build
 
 # misc
 .DS_Store
+.history
 
 # debug
 npm-debug.log*

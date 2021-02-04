@@ -1,0 +1,19 @@
+query PageByUri($Uri: String) {
+  pageBy(uri: $Uri) {
+    title
+    content
+    isPostsPage
+    pageBuilder {
+      layouts {
+        ... on Page_Pagebuilder_Layouts_Hero {
+          fieldGroupName
+          title
+        }
+        ... on Page_Pagebuilder_Layouts_TextBlock {
+          description
+          fieldGroupName
+        }
+      }
+    }
+  }
+}
