@@ -5,8 +5,8 @@
   "scripts": {
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "next build",
-    "start:dev": "cross-env TS_NODE_PROJECT=tsconfig.server.json node --max_old_space_size=4024 -r ts-node/register server/index.ts",
-    "build": "npm run build:next && npm run build:server",
+    "dev": "npm run generate && cross-env TS_NODE_PROJECT=tsconfig.server.json node --max_old_space_size=4024 -r ts-node/register server/index.ts",
+    "build": "npm run generate && npm run build:next && npm run build:server",
     "start": "NODE_ENV=production node dist/index.js",
     "lint": "eslint './{src,pages}/**/*' --ext .tsx,.ts",
     "format": "npm run lint -- --fix",

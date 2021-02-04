@@ -1,10 +1,10 @@
 overwrite: true
 schema:
-  - https://api.spacex.land/graphql:
+  - https://insomniacopensource.000webhostapp.com/graphql
 
 documents: './graphql/**/*.graphql'
 generates:
-  generated/index.tsx:
+  Generated/index.tsx:
     plugins:
       - 'typescript'
       - 'typescript-operations'

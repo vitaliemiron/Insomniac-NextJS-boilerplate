@@ -1,38 +1,41 @@
-import React, { useState } from 'react';
-import { MainHead, Launch } from '@Components';
-import { useQuery, gql } from '@apollo/client';
-import { Select, MenuItem } from '@material-ui/core';
+import React from 'react';
+import { MainHead } from '@Components';
 import { Global } from '@Components/Basic';
-
-const launches = gql`
-  query launches {
-    launches {
-      id
-      mission_name
-    }
-  }
-`;
+import { useRouter } from 'next/router';
+import {
+  useGeneralSettingsQuery,
+  useMenusQuery,
+  usePageByUriQuery,
+} from '@Generated';
 
 export const MainLayout: React.FunctionComponent = (): JSX.Element => {
-  const [missionId, setMissionId] = useState(Number);
-  const { data, loading } = useQuery(launches);
+  const { data } = useGeneralSettingsQuery();
+  const router = useRouter();
+  const { data: Menus } = useMenusQuery();
+  const primaryMenu = Menus?.menus?.nodes?.find(
+    (item) => item?.slug === 'primary-menu'
+  )?.menuItems?.nodes;
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setMissionId(event.target.value as number);
-  };
+  const { data: pageData } = usePageByUriQuery({
+    variables: { Uri: router.asPath },
+  });
 
-  if (loading || !data) return <div>Loading...</div>;
   return (
     <>
       <MainHead />
-      <Select value={missionId || data.launches[0].id} onChange={handleChange}>
-        {data.launches.map((launch: any) => (
-          <MenuItem key={launch.id} value={launch.id}>
-            {launch.mission_name}
-          </MenuItem>
+      <div>{data?.generalSettings?.title}</div>
+      <span>Menu: </span>
+      <br />
+      <ul>
+        {primaryMenu?.map((item) => (
+          <li key={item?.label}>
+            <a href={item?.path}>{item?.label}</a>
+          </li>
         ))}
-      </Select>
-      <Launch id={missionId || data.launches[0].id} />
+      </ul>
+      <br />
+      pageTitle: {pageData?.pageBy?.title} <br />
+      customField: {pageData?.pageBy?.heroTitle?.fieldGroupName}
       <Global />
     </>
   );

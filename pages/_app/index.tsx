@@ -3,16 +3,12 @@ import * as React from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
+import { theme, useApollo } from '@Utils';
 
-import { theme } from '@Utils';
+const WebApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  const apolloClient = useApollo(pageProps.initialApolloState);
 
-const client = new ApolloClient({
-  uri: 'https://api.spacex.land/graphql',
-  cache: new InMemoryCache()
-});
-
-function WebApp({ Component, pageProps }: AppProps): JSX.Element {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -23,7 +19,7 @@ function WebApp({ Component, pageProps }: AppProps): JSX.Element {
   }, []);
 
   return (
-    <ApolloProvider client={client}>
+    <ApolloProvider client={apolloClient}>
       <ThemeProvider theme={theme}>
         <MuiThemeProvider theme={theme}>
           <Component {...pageProps} />
@@ -31,6 +27,6 @@ function WebApp({ Component, pageProps }: AppProps): JSX.Element {
       </ThemeProvider>
     </ApolloProvider>
   );
-}
+};
 
 export default WebApp;

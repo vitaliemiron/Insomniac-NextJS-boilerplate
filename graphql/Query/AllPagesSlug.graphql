@@ -1,0 +1,7 @@
+query AllPagesSlug {
+  pages {
+    nodes {
+      uri
+    }
+  }
+}
