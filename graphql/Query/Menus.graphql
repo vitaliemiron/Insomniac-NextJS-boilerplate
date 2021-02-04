@@ -1,0 +1,18 @@
+query Menus {
+  menus {
+    nodes {
+      slug
+      name
+      menuId
+      id
+      menuItems {
+        nodes {
+          title
+          target
+          path
+          label
+        }
+      }
+    }
+  }
+}
