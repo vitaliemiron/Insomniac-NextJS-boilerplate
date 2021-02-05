@@ -21,7 +21,7 @@
       "@Utils/*": ["src/utils/*"],
       "@Utils": ["src/utils"],
       "@Pages/*": ["pages/*"],
-      "Generated": ["generated"],
+      "@Generated": ["generated"],
       "@Test": ["./test"]
     }
   },

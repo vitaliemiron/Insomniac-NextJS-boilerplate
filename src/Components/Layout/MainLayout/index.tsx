@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainHead } from '@Components';
-import { Global } from '@Components/Basic';
+import { Global } from '@Components/basic';
 import { useRouter } from 'next/router';
 import {
   useGeneralSettingsQuery,
