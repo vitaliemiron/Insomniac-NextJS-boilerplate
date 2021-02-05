@@ -13,7 +13,7 @@
     "pretty": "prettier --write --config .prettierrc.js {src,pages}/**/*.{ts,tsx}",
     "generate": "graphql-codegen --config codegen.yml",
     "analyze": "cross-env ANALYZE=true npm run build",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "test": "jest --coverage",
     "build-storybook": "build-storybook"
   },
