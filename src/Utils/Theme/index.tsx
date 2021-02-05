@@ -7,13 +7,13 @@ const breakPointsSettings = {
   sm: 37.5,
   md: 60,
   lg: 80,
-  xl: 120
+  xl: 120,
 };
 
 const theme = createMuiTheme({
   breakpoints: {
     unit: 'em',
-    values: { ...breakPointsSettings }
+    values: { ...breakPointsSettings },
   },
   colors: {
     blue: {
@@ -33,7 +33,7 @@ const theme = createMuiTheme({
       lighten33: '#7fb3d1',
       lighten30: '#81bbd8',
       lighten20: '#0086ba',
-      lighten10: '#0073a2'
+      lighten10: '#0073a2',
     },
     gray: {
       darken20: '#5B5F6B',
@@ -42,19 +42,19 @@ const theme = createMuiTheme({
       lighten30: '#969dae',
       lighten20: '#b5bcc8',
       lighten15: '#dfe1e6',
-      lighten10: '#f4f5f8'
+      lighten10: '#f4f5f8',
     },
     black: {
       base: '#000',
       lighten100: '#fff',
       lighten40: '#535867',
-      lighten30: '#3a3c41'
+      lighten30: '#3a3c41',
     },
     peach: {
       base: '#f6af97',
       darken20: '#ec8262',
       darken10: '#f9a389',
-      lighten30: '#ffbda8'
+      lighten30: '#ffbda8',
     },
     green: {
       base: '#2a9876',
@@ -62,7 +62,7 @@ const theme = createMuiTheme({
       lighten80: '#ccefe6',
       lighten40: '#4dc5a7',
       lighten20: '#2daf90',
-      lighten10: '#2daf90'
+      lighten10: '#2daf90',
     },
     orange: {
       base: '#e98717',
@@ -73,37 +73,37 @@ const theme = createMuiTheme({
       lighten40: '#fbbaa2',
       lighten30: '#f3a88d',
       lighten20: '#f0a65e',
-      lighten10: '#e69038'
+      lighten10: '#e69038',
     },
     violet: {
       base: '#4d4d84',
       darken20: '#020453',
       lighten80: '#f4f4f8',
       lighten70: '#e3e3ed',
-      lighten30: '#7474a5'
+      lighten30: '#7474a5',
     },
     yellow: {
-      base: '#d2af19'
+      base: '#d2af19',
     },
     red: {
       base: '#d22019',
       lighten30: '#F44336',
-      lighten80: '#fff8f8'
+      lighten80: '#fff8f8',
     },
     turquoise: {
       base: '#4e788e',
       lighten20: '#59879f',
       lighten40: '#87adc2',
       lighten60: '#adc7d5',
-      lighten80: '#d6e5ed'
-    }
+      lighten80: '#d6e5ed',
+    },
   },
   borderRadius: {
     base: '8px',
-    mobile: '6px'
+    mobile: '6px',
   },
   navbar: {
-    'z-index': 1500
+    'z-index': 1500,
   },
   typography: {
     htmlFontSize: 10,
@@ -121,8 +121,8 @@ const theme = createMuiTheme({
           maxWidth: 104.1,
           letterSpacing: 0.075,
           sm: {
-            fontSize: 2.9
-          }
+            fontSize: 2.9,
+          },
         },
         secondary: {
           fontSize: 2.925,
@@ -132,12 +132,12 @@ const theme = createMuiTheme({
           letterSpacing: 0.075,
 
           sm: {
-            fontSize: 2.4
-          }
-        }
-      }
-    }
-  }
+            fontSize: 2.4,
+          },
+        },
+      },
+    },
+  },
 });
 
 export { theme };

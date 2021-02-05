@@ -35,7 +35,7 @@ export const MainLayout: React.FunctionComponent = (): JSX.Element => {
       </ul>
       <br />
       pageTitle: {pageData?.pageBy?.title} <br />
-      customField: {pageData?.pageBy?.heroTitle?.fieldGroupName}
+      customField: {pageData?.pageBy?.title}
       <Global />
     </>
   );
