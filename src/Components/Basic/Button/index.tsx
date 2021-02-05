@@ -21,7 +21,6 @@ export const Button: React.FunctionComponent<IButton.IProps> = ({
   active,
   disableRipple,
   disableFocusRipple,
-  fill
 }) => {
   const modifiers = modifier || 'default';
   return loading ? (
