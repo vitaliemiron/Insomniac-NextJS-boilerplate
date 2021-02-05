@@ -9,7 +9,10 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "typescript": {}
+      // use <root>/tsconfig.json
+      "typescript": {
+        "alwaysTryTypes": true // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+      }
     }
   },
   "extends": [
@@ -30,21 +33,18 @@
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "react/prop-types": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "import/no-unresolved": [
-      "error",
-      {
-        "ignore": [".svg"]
-      }
-    ],
+
     "no-use-before-define": [0],
     "@typescript-eslint/no-use-before-define": [1],
-    "@typescript-eslint/no-explicit-any": ["error"]
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "import/no-unresolved": "error"
   },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/interface-name-prefix": "off",
+        "import/no-unresolved": "off",
         "jsx-a11y/anchor-is-valid": [
           "error",
           {

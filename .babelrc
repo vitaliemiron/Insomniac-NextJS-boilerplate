@@ -6,11 +6,11 @@
       {
         "root": ["./"],
         "alias": {
-          "@Components": "./src/Components",
-          "@Utils": "./src/Utils",
+          "@Components": "./src/components",
+          "@Utils": "./src/utils",
           "@Pages": "./pages",
           "@Public": "./public",
-          "@Generated": "./Generated"
+          "@Generated": "./generated"
         }
       }
     ],

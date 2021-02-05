@@ -28,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const path =
     params?.slug && Array.isArray(params.slug) && params.slug.length > 0
-      ? params.slug?.join('/')
+      ? params.slug.join('/')
       : '/';
 
   const apolloClient = await initializeApollo();

@@ -1,7 +1,7 @@
 import { withStyles } from '@material-ui/core/styles';
 import {
   Button,
-  CircularProgress as MuiCircularProgress
+  CircularProgress as MuiCircularProgress,
 } from '@material-ui/core';
 import { theme } from '@Utils';
 import styled from 'styled-components';
@@ -15,8 +15,8 @@ export interface ButtonProps {
 
 export const CircularProgress = withStyles({
   root: {
-    color: theme.colors.blue.base
-  }
+    color: theme.colors.blue.base,
+  },
 })(MuiCircularProgress);
 
 export const Buttons = styled(Button)`

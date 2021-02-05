@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -13,15 +13,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@Components/*": ["src/Components/*"],
-      "@Components": ["src/Components"],
+      "@Components/*": ["src/components/*"],
+      "@Components": ["src/components"],
       "@Public": ["public/*"],
-      "@Utils/*": ["src/Utils/*"],
-      "@Utils": ["src/Utils"],
+      "@Utils/*": ["src/utils/*"],
+      "@Utils": ["src/utils"],
       "@Pages/*": ["pages/*"],
-      "@Generated": ["Generated"]
+      "@Generated": ["generated"],
+      "@Test": ["./test"]
     }
   },
   "exclude": [

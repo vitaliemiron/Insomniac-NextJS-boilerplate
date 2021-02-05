@@ -6,7 +6,7 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentContext
+  DocumentContext,
 } from 'next/document';
 
 import { ServerStyleSheet as StyledComponentSheets } from 'styled-components';
@@ -26,7 +26,7 @@ class WebAppDocument extends Document {
           enhanceApp: (App) => (props) =>
             styledComponentSheet.collectStyles(
               materialUiSheets.collect(<App {...props} />)
-            )
+            ),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -38,7 +38,7 @@ class WebAppDocument extends Document {
             {materialUiSheets.getStyleElement()}
             {styledComponentSheet.getStyleElement()}
           </>
-        )
+        ),
       };
     } finally {
       styledComponentSheet.seal();
