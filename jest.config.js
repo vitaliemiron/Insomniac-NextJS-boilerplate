@@ -8,6 +8,9 @@ module.exports = {
     },
   },
   coveragePathIgnorePatterns: ["/node_modules/", "/server/"],
+  testPathIgnorePatterns: [
+    "<rootDir>/storybook.test.ts"
+  ],
   setupFilesAfterEnv: ["<rootDir>/test/jest.setup.ts"],
   coverageReporters: ["json", "lcov", "text", "text-summary"],
   moduleNameMapper: {
