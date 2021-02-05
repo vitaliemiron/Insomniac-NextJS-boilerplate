@@ -4,7 +4,7 @@ schema:
 
 documents: './graphql/**/*.graphql'
 generates:
-  Generated/index.tsx:
+  generated/index.tsx:
     plugins:
       - 'typescript'
       - 'typescript-operations'

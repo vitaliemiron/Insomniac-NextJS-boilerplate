@@ -16,12 +16,12 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@Components/*": ["src/Components/*"],
-      "@Components": ["src/Components"],
-      "@Utils/*": ["src/Utils/*"],
-      "@Utils": ["src/Utils"],
+      "@Components/*": ["src/components/*"],
+      "@Components": ["src/components"],
+      "@Utils/*": ["src/utils/*"],
+      "@Utils": ["src/utils"],
       "@Pages/*": ["pages/*"],
-      "@Generated": ["Generated"],
+      "Generated": ["generated"],
       "@Test": ["./test"]
     }
   },
