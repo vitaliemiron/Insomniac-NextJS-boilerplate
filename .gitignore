@@ -21,6 +21,7 @@ Generated/
 # misc
 .DS_Store
 .history
+.idea
 
 # debug
 npm-debug.log*
