@@ -9,19 +9,19 @@ export const MainHead = () => {
       <meta charSet="utf-8" />
       <meta
         name="description"
-        content="The Newborn Screening Translational Research Network"
+        content="Insomniac boilerplate"
       />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="keyword"
-        content="newborn, screening, translational, research, network"
+        content="screening, translational, research, network"
       />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta
         property="og:description"
-        content="The Newborn Screening Translational Research Network"
+        content="Insomniac boilerplate"
       />
       <meta property="og:image" content="/logo.svg" />
       <link

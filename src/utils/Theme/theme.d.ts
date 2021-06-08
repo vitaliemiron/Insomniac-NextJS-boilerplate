@@ -21,7 +21,7 @@ interface Heading {
   };
 }
 
-interface NBSTRNTheme {
+interface InsomniacTheme {
   colors: {
     [key: string]: Color;
   };
@@ -38,7 +38,7 @@ interface NBSTRNTheme {
   };
 }
 
-export interface NBSTRNColorScheme {
+export interface InsomniacColorScheme {
   [key: string]: string[];
 }
 
@@ -60,7 +60,7 @@ declare module 'styled-components' {
 }
 
 declare module '@material-ui/core/styles/createMuiTheme' {
-  interface Theme extends NBSTRNTheme {}
+  interface Theme extends InsomniacTheme {}
   // allow configuration using `createMuiTheme`
-  interface ThemeOptions extends NBSTRNTheme {}
+  interface ThemeOptions extends InsomniacTheme {}
 }

@@ -4,8 +4,8 @@ import { StylesProvider } from '@material-ui/styles';
 import { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from '@apollo/client';
 
-import { theme, useApollo } from '../src/Utils';
-import { Global } from '../src/Components/Basic';
+import { theme, useApollo } from '../src/utils';
+import { Global } from '../src/components/basic';
 
 const ThemeDecorator = ({ children }) => {
   const apolloClient = useApollo();
