@@ -1,5 +1,0 @@
-query GeneralSettings {
-  generalSettings {
-    title
-  }
-}

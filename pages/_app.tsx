@@ -7,7 +7,8 @@ import { ApolloProvider } from '@apollo/client';
 import { theme, useApollo } from '@Utils';
 
 const WebApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  const apolloClient = useApollo(pageProps.initialApolloState);
+  console.log('page props', pageProps);
+  const apolloClient = useApollo(pageProps);
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.

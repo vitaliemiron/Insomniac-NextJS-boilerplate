@@ -1,6 +1,6 @@
 overwrite: true
 schema:
-  - https://insomniacopensource.000webhostapp.com/graphql
+  - https://api.spacex.land/graphql
 
 documents: './graphql/**/*.graphql'
 generates:

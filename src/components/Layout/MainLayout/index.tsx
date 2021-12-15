@@ -1,41 +1,31 @@
 import React from 'react';
 import { MainHead } from '@Components';
 import { Global } from '@Components/basic';
-import { useRouter } from 'next/router';
-import {
-  useGeneralSettingsQuery,
-  useMenusQuery,
-  usePageByUriQuery,
-} from '@Generated';
+import { useGetUsersQuery } from '@Generated';
 
 export const MainLayout: React.FunctionComponent = (): JSX.Element => {
-  const { data } = useGeneralSettingsQuery();
-  const router = useRouter();
-  const { data: Menus } = useMenusQuery();
-  const primaryMenu = Menus?.menus?.nodes?.find(
-    (item) => item?.slug === 'primary-menu'
-  )?.menuItems?.nodes;
+  const { data } = useGetUsersQuery();
 
-  const { data: pageData } = usePageByUriQuery({
-    variables: { Uri: router.asPath },
-  });
+  console.log('data', data);
 
   return (
     <>
       <MainHead />
-      <div>{data?.generalSettings?.title}</div>
       <span>Menu: </span>
       <br />
-      <ul>
-        {primaryMenu?.map((item) => (
-          <li key={item?.label}>
-            <a href={item?.path}>{item?.label}</a>
-          </li>
-        ))}
-      </ul>
+      {data?.users.map((user) => (
+        <>
+          <div>
+            <div className="name">name: {user.name}</div>
+            <div className="id">id: {user.id}</div>
+            <div className="rocket"> rocket: {user.rocket} </div>
+            <div className="twitter">twitt: {user.twitter}</div>
+          </div>
+          <hr />
+        </>
+      ))}
       <br />
-      pageTitle: {pageData?.pageBy?.title} <br />
-      customField: {pageData?.pageBy?.title}
+
       <Global />
     </>
   );

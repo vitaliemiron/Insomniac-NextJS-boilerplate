@@ -48,3 +48,4 @@ box. Here's an overview of the included components and tools.
 ## License
 
 Licensed under the MIT License, Copyright © 2020-present Insomniac Design
+# graphql-gen
